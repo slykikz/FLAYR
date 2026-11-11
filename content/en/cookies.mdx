@@ -1,0 +1,23 @@
+# Cookies and similar technologies
+
+We use necessary technologies for requested features such as secure sessions, the shopping bag and privacy preferences. Optional measurement identifiers are enabled only after the corresponding choice. You can accept or reject optional purposes and change your choice through “Cookie preferences” in the footer. Rejecting optional features does not prevent purchases.
+
+## Current storage inventory
+
+| Name                   | Purpose                                              | Duration                                            |
+| ---------------------- | ---------------------------------------------------- | --------------------------------------------------- |
+| flayr-bag              | Shopping bag in local storage                        | Until cleared by the visitor or a confirmed payment |
+| flayr-favorites        | Saved products in local storage                      | Until cleared by the visitor                        |
+| flayr-consent          | Privacy preference in local storage                  | Until changed or cleared                            |
+| flayr-payment-intent   | Order reference in session storage; no client secret | Browser tab session                                 |
+| flayr-purchase:\*      | Purchased items/quantities used to update the bag    | Until confirmation or end of tab session            |
+| \_\_Host-flayr-shopper | Associates checkout browser with order status        | 7 days                                              |
+| \_\_Host-flayr         | Secure staff session cookie                          | 1 hour                                              |
+| flayr-offer:\*         | Avoids repeating a promotion in the same tab         | Browser tab session                                 |
+| flayr-viewer           | Optional visitor counter identifier                  | Browser tab session                                 |
+
+The interface language is encoded in the page URL. Chat messages remain in page memory. Stripe may set payment and fraud-prevention cookies when the payment component loads; verify the actual names, domains and durations in the configured Stripe environment before publication. No Google Analytics or Meta Pixel is configured.
+
+The final inventory must include the provider/domain, specific purpose, category, first/third-party status, collected data and duration from a real deployment audit. See [CNPD guidance](https://www.cnpd.pt/media/x2zdus50/nota-informativa-cnpd_cookies_20210625.pdf).
+
+Accept and reject must have equal visual weight and ease of use. Optional choices start off; closing the banner or continuing to browse does not imply consent. See [EDPB cookie banner report](https://www.edpb.europa.eu/system/files/2023-01/edpb_20230118_report_cookie_banner_taskforce_en.pdf).

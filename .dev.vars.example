@@ -1,0 +1,35 @@
+# SERVER ONLY. Copy to .dev.vars locally. Use Cloudflare secrets/settings in production.
+APP_ORIGIN=http://127.0.0.1:5173
+COMMERCE_ENABLED=false
+SUPABASE_URL=
+SUPABASE_PUBLISHABLE_KEY=
+SUPABASE_SERVICE_ROLE_KEY=
+UPSTASH_REDIS_REST_URL=
+UPSTASH_REDIS_REST_TOKEN=
+# 32 cryptographically random bytes encoded as base64. Preserve securely for decryption.
+PII_KEY_V1=
+STRIPE_PUBLISHABLE_KEY=
+STRIPE_SECRET_KEY=
+STRIPE_WEBHOOK_SECRET=
+RESEND_API_KEY=
+EMAIL_FROM=
+# Private recipient for the contact form; NEVER returned to the browser.
+CONTACT_TO=
+# Optional customer-facing support alias; deliberately public.
+PUBLIC_SUPPORT_EMAIL=
+OPENAI_API_KEY=
+# Exact Responses-compatible model ID available in your OpenAI project.
+OPENAI_MODEL=
+# Approved actual carriers, destinations and delivery estimates, used by the assistant.
+STORE_SHIPPING_INFO=
+# Only approved BUSINESS information belongs in these intentionally public fields.
+PUBLIC_BUSINESS_DETAILS_APPROVED=false
+LEGAL_ENTITY_NAME=
+LEGAL_ENTITY_VAT=
+LEGAL_ENTITY_ADDRESS=
+LEGAL_ENTITY_EMAIL=
+LEGAL_ENTITY_PHONE=
+LEGAL_ENTITY_PHONE_COST=
+LEGAL_ENTITY_ADR=
+# Set to 2026-10-21-v2 only after completing and approving both legal language versions.
+LEGAL_APPROVED_VERSION=

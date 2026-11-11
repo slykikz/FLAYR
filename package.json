@@ -1,0 +1,69 @@
+{
+  "name": "flayr-commerce",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "tsc --noEmit && vite build && node scripts/prerender.mjs",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "vitest run",
+    "dev:api": "wrangler dev --port 8787",
+    "deploy": "npm run build && wrangler deploy",
+    "db:generate": "drizzle-kit generate",
+    "check:worker": "wrangler deploy --dry-run --outdir .worker-build",
+    "dev:web": "vite --host 127.0.0.1",
+    "check:config": "node scripts/check-config.mjs",
+    "check:routes": "node scripts/check-routes.mjs"
+  },
+  "dependencies": {
+    "@fontsource/barlow-condensed": "5.3.0",
+    "@fontsource/inter": "5.3.0",
+    "@react-email/render": "2.1.1",
+    "@react-three/drei": "10.7.9",
+    "@react-three/fiber": "9.8.2",
+    "@simplewebauthn/browser": "14.0.0",
+    "@stripe/react-stripe-js": "7.0.0",
+    "@stripe/stripe-js": "10.1.0",
+    "@supabase/supabase-js": "2.118.0",
+    "@upstash/ratelimit": "2.2.0",
+    "@upstash/redis": "1.39.0",
+    "@vercel/og": "1.0.3",
+    "dompurify": "3.4.17",
+    "drizzle-orm": "0.45.4",
+    "hono": "4.13.13",
+    "lucide-react": "1.59.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "stripe": "23.0.0",
+    "three": "0.186.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "5.20261018.1",
+    "@electric-sql/pglite": "0.5.10",
+    "@mdx-js/rollup": "3.1.1",
+    "@tailwindcss/vite": "4.3.3",
+    "@types/mdx": "2.0.14",
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/three": "0.186.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "drizzle-kit": "0.31.11",
+    "prettier": "3.9.10",
+    "remark-gfm": "4.0.1",
+    "sharp": "0.35.5",
+    "tailwindcss": "4.3.3",
+    "typescript": "7.0.2",
+    "vite": "8.3.4",
+    "vitest": "5.0.5",
+    "wrangler": "4.151.1"
+  },
+  "overrides": {
+    "@esbuild-kit/core-utils": {
+      "esbuild": "0.25.12"
+    },
+    "fflate": "0.8.3"
+  }
+}
